@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <div class="logo">RDS</div>
+    <div class="nav-buttons">
+      <button id="showloginform">Login</button>
+      <button id="shownewuserform">New User</button>
+      <button id="showprofile" >Profile</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="login-form" class="hidden-login-container">
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="userid">User ID</label>
+        <input type="text" id="userid" name="userid" placeholder="Enter your User ID" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+      </div>
+
+      <button id="login" type="button" class="goto-btn">Go To</button>
+    </form>
+  </div>
+  <!--this is phone number verification section for nwe registration -->
+    <div id="hiddenForm" class="hidden-verify-container">
+    <h2>Phone Verification</h2>
+    <form>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="otp">Enter OTP</label>
+        <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
+      </div>
+ 
+      <div class="button-container">
+        <button type="button" id="getotp" class="btn get-otp-btn">Get OTP</button>
+        <button type="button" id="verifyotp" class="btn verify-btn">Verify OTP</button>
+      </div>
+    </form>
+  </div>
+
+
+  <!--this section for new registration and password creation-->
+  <div id="showregisterform" class="hidden-register-container">
+    <h2>Register</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="enter-phone">Phone Number</label>
+        <input type="tel" id="enter-phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="enter-password" name="password" placeholder="Enter password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="verifypassword">Verify Password</label>
+        <input type="password" id="verifypassword" name="verifypassword" placeholder="Re-enter password" required>
+      </div>
+
+      <button id="next" type="button" class="next-btn">Next</button>
+    </form>
+  </div>
+   <!--profile-->
+   <div id="profilecontainer" class="hidden-profile-container">
+    <div class="profile">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="profile" />
+      <h2 id="username">User Name</h2>
+    </div>
+
+   <div id="selectaddress" class="addressContainer">
+    <P> LODING ADDRESS..........</P>
+    
+   </div>
+   <div style="display:flex">
+   <button type="button" id="Selectaddress" class="selectaddressbutton">select</button>
+    <button type="button" id="addaddress" class="addaddressbutton">AddNEW</button>
+    </div>
+    
+
+    <div class="coin-section">
+      <p>Coin Balance: <span id="coinBalance">0</span></p>
+      <input type="number" id="amountInput" placeholder="Enter amount to add" />
+      <br /><br />
+      <button type="button" id="pay" class="paybutton ">PAY</button>
+    </div>
+  </div>
+<!-- form for adding new address-->
+ <div id="addressContainer" class="hidden-addressContainer">
+    <h2>Enter Address Details</h2>
+    <form id="addressForm">
+      <div class="form-group">
+        <label for="pincode">Pincode</label>
+        <input type="text" id="pincode" name="pincode" maxlength="6" placeholder="Enter 6-digit Pincode" required>
+      </div>
+
+      <div class="form-group">
+        <label for="landmark">Landmark</label>
+        <input type="text" id="landmark" name="landmark" placeholder="Enter nearby landmark">
+      </div>
+
+      <div class="form-group">
+        <label for="buildingName">Building Name</label>
+        <input type="text" id="buildingName" name="buildingName" placeholder="Enter building or house name">
+      </div>
+
+      <div class="form-group">
+        <label for="colonyName">Colony Name</label>
+        <input type="text" id="colonyName" name="colonyName" placeholder="Enter colony or area name">
+      </div>
+
+      <div class="form-group">
+        <label for="addressText">Full Address</label>
+        <textarea id="addressText" name="addressText" placeholder="Write complete address here with phone number"></textarea>
+      </div>
+
+      <button type="button" id="submitbtn" class="btn">Submit Address</button>
+    </form>
+  </div>
+  <!--  order container-->
+    <div id="orderContainer"></div>
+   
+  </main>
+    
+
+    <script src="front.js"></script>
+</body>
+</html>
